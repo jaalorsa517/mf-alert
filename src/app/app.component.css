@@ -1,0 +1,39 @@
+.alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  z-index: 100;
+}
+.alert__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  color: #213785;
+  border-radius: 0.8em;
+  box-shadow: 3px 3px 5px 5px #ccc;
+}
+
+.alert__container {
+  margin: 1em;
+}
+
+.alert__btn {
+  padding: 0.8em;
+  background-color: #213785;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 0.3em;
+  cursor: pointer;
+}
+.alert__btn:hover {
+  opacity: 0.8;
+}
+
+.alert__container--body {
+  color: #0c2e0b;
+}

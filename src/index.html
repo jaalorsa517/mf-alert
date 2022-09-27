@@ -1,13 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>WcAlert</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>WcAlert</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+  <body>
+    <main>
+      <button class="btnPrincipal">Mostrar button</button>
+      <wc-alert id="app" titulo="Cuidado con lo que hace">
+        <p>Esto es el mensaje que quiero mostrar</p>
+      </wc-alert>
+    </main>
+
+    <script>
+      const btn = document.querySelector(".btnPrincipal");
+      const app = document.getElementById("app");
+      app.addEventListener("submit", (e) => {
+        app.setAttribute("isOpen", "false");
+        btn.style.display = "block";
+      });
+      btn.addEventListener("click", () => {
+        app.setAttribute("isOpen", "true");
+        btn.style.display = "none";
+      });
+    </script>
+  </body>
 </html>
